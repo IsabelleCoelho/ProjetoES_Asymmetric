@@ -1,1 +1,4 @@
-O projeto será um sistema web de vendas de obra de arte. Nele terão tipos de acesso, gerente e cliente, onde o gerente poderá adicionar, alterar, excluir e consular as obras expostas, já o cliente poderá comprar, e terá um perfil com dados cadastrais, onde poderá alterar e excluir o perfil.
+O projeto será um sistema web de vendas de obra de arte. 
+Nele, terão os tipos de acesso gerente e cliente.
+O gerente poderá adicionar, alterar, excluir e consular as obras expostas
+O cliente poderá comprar uma ou mais obras e terá um perfil, o qual poderá alterar e excluir.
