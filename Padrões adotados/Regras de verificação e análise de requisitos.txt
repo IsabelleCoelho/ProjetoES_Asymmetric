@@ -1,0 +1,4 @@
+As regras nas quais todo o processo da especificação dos requisitos se embasará são:
+- Definir somente um requisito por vez;
+- Evitar frases extensas;
+- Tranformação dos requisitos de usuário em requisitos de software.
