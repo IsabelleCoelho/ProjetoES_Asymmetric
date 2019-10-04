@@ -2,3 +2,14 @@ As regras nas quais todo o processo da especificação dos requisitos se embasar
 - Definir somente um requisito por vez;
 - Evitar frases extensas;
 - Tranformação dos requisitos de usuário em requisitos de software.
+
+Segue o padrão que será seguido para descrever o projeto:
+RF[XXX] Nome Do Requisito
+    Onde XXX indica o número do requisito, começando por 001.
+    RF = requisito funcional
+RNF[YYY] Nome Do Requisito
+    Onde YYY indica o número do requisito, começando por 001.
+    RNF = requisito não funcional
+
+Para todos os tipos de requisitos, será feita uma tabela contendo a identificação do requisito (como descrita anterirormente) 
+e a descrição de tal requisito.
