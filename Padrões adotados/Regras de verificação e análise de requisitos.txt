@@ -11,5 +11,3 @@ RNF[YYY] Nome Do Requisito
     Onde YYY indica o número do requisito, começando por 001.
     RNF = requisito não funcional
 
-Para todos os tipos de requisitos, será feita uma tabela contendo a identificação do requisito (como descrita anterirormente) 
-e a descrição de tal requisito.
