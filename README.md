@@ -10,6 +10,7 @@ O cliente poderá comprar uma ou mais obras e terá um perfil, o qual poderá al
 ## Tecnologias Utilizadas
 - HTML5 e CSS3
 - 
+- Local Host
 
 ## Diretórios
 ```sh
