@@ -9,7 +9,7 @@ O cliente poderá comprar uma ou mais obras e terá um perfil, o qual poderá al
 
 ## Tecnologias Utilizadas
 - HTML5 e CSS3
-- 
+- PHP versão 5.5
 - Apache2 versão 2.4.29
 
 ## Diretórios
