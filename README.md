@@ -17,6 +17,9 @@ O cliente poderá comprar uma ou mais obras e terá um perfil, o qual poderá al
 ```sh
 |-- docs
   |-- logos
+  |-- Protótipo
+  |-- logosRequisitos
 |-- back-end
 |-- front-end
+|-- Padrões adotados
 ```
