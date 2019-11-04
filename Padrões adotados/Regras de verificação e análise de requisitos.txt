@@ -1,6 +1,6 @@
 As regras nas quais todo o processo da especificação dos requisitos se embasará são:
 - Definir somente um requisito por vez;
-- Evitar frases extensas;
+- Evitar frases com mais de 200 caracteres;
 - Tranformação dos requisitos de usuário em requisitos de software.
 
 Segue o padrão que será seguido para descrever o projeto:
