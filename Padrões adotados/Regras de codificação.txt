@@ -1,0 +1,7 @@
+Regras de codificação:
+1- Identar o código;
+2- Nomear variáveis de maneira intuitiva;
+3- Nomear funções de maneira intuitiva;	
+4- Comentar o código;
+5- Percorrer loops somente o necessário;
+6- Padronizar nome de constantes, deixando-as em caixa alta.
