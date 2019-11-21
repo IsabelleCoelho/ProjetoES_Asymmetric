@@ -1,0 +1,92 @@
+html, body{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    background: rgb(29,29,33)!important;
+    background: linear-gradient(90deg, rgba(29,29,33,1) 0%, rgba(79,79,88,1) 50%, rgba(203,205,226,1) 100%)!important;
+    font-family: 'Nunito', sans-serif;
+}
+.conteinerFormulario{
+    display: grid;
+    grid-template-columns: 1.25fr 2.5fr 1.25fr;
+    grid-template-rows: 10fr 60fr 30fr;
+    grid-template-areas:"l m r"
+                        "marginRight f marginLeft"
+                        "b b b"
+}
+
+#logo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    grid-area: m;
+}
+
+.logo1{
+    width: 170px;
+}
+
+#formulario{
+    color: #1D1D21;
+    background: rgb(228, 229, 238);
+    grid-area: f;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.596);
+    
+}
+
+.titulo{
+    display: flex;
+    color: #1D1D21;
+    flex-direction: column;
+    align-items: center;
+    grid-area: f;
+    padding-top: 5px;
+    margin-bottom: 55px;
+    font-weight: normal;
+}
+
+label{
+    margin-top: 6px;
+}
+
+input{
+    margin-top:6px;
+    min-width: 200px;
+    background-color: rgb(228, 229, 238);
+    height: auto;
+    padding: 2.5px;
+    display: inline-block;
+    border: 0px solid #fff;
+    border-bottom: 1px solid #1D1D21;
+    color: #1D1D21;
+    margin-bottom: 30px;
+}
+
+#botoes{
+    font-size: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    margin:10px;
+    margin-top: 15px;
+}
+button{
+    background-color: rgb(228, 229, 238);
+    color:rgb(55, 55, 58);
+    border-radius: 10px;
+    flex: 1;
+    font-weight: bold;
+    margin: 10px;
+    border-color: rgb(55, 55, 58);
+}
+
+button:hover{
+    background-color:rgb(55, 55, 58);
+    color: rgb(228, 229, 238);
+}
