@@ -4,7 +4,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    background-color: transparent;
+
 }
 
 header{
@@ -20,11 +20,16 @@ header{
     padding-top:12px;
     background-color:#1D1D21;
 }
+
 .logo1{
     cursor: pointer;
     width: 150px;
     height: 45px;
     background-color: transparent;
+}
+.botaoMenu{
+    width: 40px;
+    height: 40px;
 }
 .botaoPesquisa{
     width: 40px;
@@ -41,35 +46,50 @@ header{
     margin-top: 8px;
     margin-left: 8px;
 }
-.botaoMenu{
-    width: 40px;
-    height: 40px;
-}
+
 .botaoMenu:hover{
     background-color:#333;
     border-radius:20px;
 }
-.menu{
-    cursor: pointer;
-    background-color: transparent;
-    height: 24px;
-    margin-top: 8px;
-    margin-left: 8px;
-}
-.pensador{
+body{
     background: rgb(29,29,33)!important;
-    background: linear-gradient(90deg, rgba(29,29,33,1) 0%, rgba(79,79,88,1) 50%, rgba(203,205,226,1) 100%)!important;
-    height:900px;
-    padding-top:80px;
+    background: linear-gradient(90deg, rgba(29,29,33,1) 0%, rgba(79,79,88,1) 50%, rgba(203,205,226,1) 100%)!important;;
 }
 
-.pensador h1{
-    padding-top: 130px;
-    padding-left: 350px;
-    color:  rgba(203,205,226,1);
+.container{
+    display: grid;
+    grid-template-columns: 0.25fr 2.25fr 2.25fr 0.25fr;
+    grid-template-rows: 10fr 80fr 10fr;
+    grid-template-areas:"l m m r"
+                        "marginRight picture description marginLeft"
+                        "bottomRight b b bottomLeft";
 }
+
+.imagem{
+    grid-area: picture;
+    margin-top: 110px;
+    margin-left: 50px;
+    margin-right: 5px;;
+    align-content: center;
+    text-align: center;
+    color: gray;
+}
+
+.descricao{
+    grid-area: description;
+    margin-top: 290px;
+    align-items: center;
+    text-align: center;
+    margin-right: 50px;
+    margin-left: 5px;
+}
+
+#titulo{
+    margin-bottom: 90px;
+}
+
 .menuAdmin{
-    float:right;
+    grid-area: marginLeft;
     margin-right: 24px;
     margin-top:24px;
     width: 60px;
@@ -77,7 +97,6 @@ header{
     border-radius: 2px;
     background-color: white;
 }
-
 .menuAdmin1 ul{
     align-items: center;
     list-style: none;
@@ -95,29 +114,8 @@ header{
     background-color: lightgrey;
 }
 
-
-.imgProduto{
-    margin-left:250px;
-    margin-top:190px;
-    width: 350px;
-    height: 460px;
-}
-
 #addProduto{
     text-decoration: none;
     font-size:20px;
     color:rgba(203,205,226,1);
-}
-.infos{
-    float:right;
-    margin-right: 150px;
-}
-.infos button{
-    font-size: 16px;
-    border: 2px rgba(203,205,226,1);
-    background-color: transparent;
-    color:rgba(203,205,226,1);
-    border-radius:4px;
-    height: 25px;
-    width: 75px;
 }
