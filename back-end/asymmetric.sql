@@ -4,13 +4,14 @@ USE `mydb`;
 CREATE TABLE IF NOT EXISTS `asymmetric`.`obra` (
   `idObra` INT NOT NULL AUTO_INCREMENT,
   `nomeObra` VARCHAR(20) NOT NULL,
-  `valorEstimado` LONG NOT NULL,
+  `valorEstimado` BIGINT NOT NULL,
   `material` VARCHAR(10) NOT NULL,
   `local` VARCHAR(15) NOT NULL,
   `nomeAutor` VARCHAR(15) NOT NULL,
-  `foto` VARCHAR(15) NOT NULL,
+  `foto` VARCHAR(30) NOT NULL,
   `largura` FLOAT NOT NULL,
-  `altura`  FLOAT NOT NULL,
+  `altura` FLOAT NOT NULL,
+  `tipoFundo` INT NOT NULL,
   PRIMARY KEY (`idObra`),
   INDEX (`nomeObra`))
 ENGINE = InnoDB;
