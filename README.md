@@ -28,17 +28,17 @@ O cliente poderá comprar uma ou mais obras e terá um perfil, o qual poderá al
 ## Diretórios
 ```sh
 |-- docs
-  		|-- logos
-  		|-- Protótipo
-  		|-- Requisitos
-		|-- Diagramas de Sequencia
-		|-- Diagrama de Classe
-	|-- back-end
-		|-- PHP
-	|-- front-end
-		|-- HTML
-		|-- CSS
-		|-- JS
-		|-- Assets
-	|-- Padrões adotados
-		
+	|-- logos
+	|-- Protótipo
+	|-- Requisitos
+	|-- Diagramas de Sequencia
+	|-- Diagrama de Classe
+	|-- Diagrama de Implantação
+|-- back-end
+	|-- PHP
+|-- front-end
+	|-- HTML
+	|-- CSS
+	|-- JS
+	|-- Assets
+|-- Padrões adotados
