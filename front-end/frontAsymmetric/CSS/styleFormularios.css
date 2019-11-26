@@ -9,7 +9,16 @@ html, body{
 .conteinerFormulario{
     display: grid;
     grid-template-columns: 1.25fr 2.5fr 1.25fr;
-    grid-template-rows: 10fr 60fr 30fr;
+    grid-template-rows: 10fr 60fr 5fr;
+    grid-template-areas:"l m r"
+                        "marginRight f marginLeft"
+                        "b b b"
+}
+
+.conteinerFormularioLogin{
+    display: grid;
+    grid-template-columns: 1.5fr 2fr 1.5fr;
+    grid-template-rows: 20fr 50fr 20fr;
     grid-template-areas:"l m r"
                         "marginRight f marginLeft"
                         "b b b"
@@ -19,7 +28,7 @@ html, body{
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 20px;
+    padding: 25px;
     grid-area: m;
 }
 
@@ -38,8 +47,8 @@ html, body{
     padding: 20px;
     border-radius: 5px;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.596);
-    
 }
+
 
 .titulo{
     display: flex;
@@ -73,6 +82,12 @@ input{
     font-size: 20px;
     display: flex;
     flex-wrap: wrap;
+    margin:10px;
+    margin-top: 15px;
+}
+#buttonLogin{
+    font-size: 20px;
+    display: flex;
     margin:10px;
     margin-top: 15px;
 }
