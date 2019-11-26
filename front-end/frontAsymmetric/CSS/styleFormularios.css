@@ -9,7 +9,7 @@ html, body{
 .conteinerFormulario{
     display: grid;
     grid-template-columns: 1.25fr 2.5fr 1.25fr;
-    grid-template-rows: 10fr 60fr 30fr;
+    grid-template-rows: 10fr 60fr 5fr;
     grid-template-areas:"l m r"
                         "marginRight f marginLeft"
                         "b b b"
@@ -84,6 +84,7 @@ button{
     font-weight: bold;
     margin: 10px;
     border-color: rgb(55, 55, 58);
+    box-shadow: 0px;
 }
 
 button:hover{
