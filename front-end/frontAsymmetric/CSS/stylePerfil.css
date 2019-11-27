@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+}
+
+header{
+    height: 56px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    position: fixed;
+    padding-left:24px;
+    padding-right:24px;
+    padding-bottom:12px;
+    padding-top:12px;
+    background-color:#1D1D21;
+}
+.logo1{
+    cursor: pointer;
+    width: 150px;
+    height: 45px;
+    background-color: transparent;
+}
+.botaoMenu{
+    width: 40px;
+    height: 40px;
+}
+.botaoPesquisa{
+    width: 40px;
+    height: 40px;
+}
+.botaoPesquisa:hover{
+    background-color:#333;
+    border-radius:20px;
+}
+.pesquisa{
+    cursor: pointer;
+    background-color: transparent;
+    height: 24px;
+    margin-top: 8px;
+    margin-left: 8px;
+}
+.menu{
+    cursor: pointer;
+    background-color: transparent;
+    height: 24px;
+    margin-top: 8px;
+    margin-left: 8px;
+}
+
+.botaoMenu:hover{
+    background-color:#333;
+    border-radius:20px;
+}
+body{
+    background: rgb(228, 229, 238);
+}
+
+.container{
+    padding-top:56px;
+    display: grid;
+    grid-template-columns: 2.5fr 2.5fr 2.5fr;
+    grid-template-rows: 20fr 60fr 20fr;
+    grid-template-areas:"l m r"
+                        "marginRight f marginLeft"
+                        "b b b"
+}
+input{
+    grid-area: m;
+}
+#foto{
+    background-color: lightgray;
+    border-radius: 100%;
+    width: 200px;
+    height: 200px;
+}
+
+.imgdefault{
+    width: 200px;
+}
+label{
+    margin-top: 6px;
+}
+
+input{
+    margin-top:6px;
+    min-width: 200px;
+    background-color: rgb(228, 229, 238);
+    height: auto;
+    padding: 2.5px;
+    display: inline-block;
+    border: 0px solid #fff;
+    border-bottom: 1px solid #1D1D21;
+    color: #1D1D21;
+    margin-bottom: 30px;
+}
+button{
+    background-color: rgb(228, 229, 238);
+    color:rgb(55, 55, 58);
+    border-radius: 10px;
+    flex: 1;
+    font-weight: bold;
+    margin: 10px;
+    border-color: rgb(55, 55, 58);
+}
+
+button:hover{
+    background-color:rgb(55, 55, 58);
+    color: rgb(228, 229, 238);
+}
+
+#botaoAlterar{
+    padding: 8px 18px; 
+    margin-right: 20px
+}
