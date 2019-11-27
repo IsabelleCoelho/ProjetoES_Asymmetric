@@ -10,8 +10,6 @@ html, body{
     display: grid;
     grid-template-columns: 1.25fr 2.5fr 1.25fr;
     grid-template-rows: 10fr 60fr 5fr;
-<<<<<<< HEAD
-=======
     grid-template-areas:"l m r"
                         "marginRight f marginLeft"
                         "b b b"
@@ -21,7 +19,6 @@ html, body{
     display: grid;
     grid-template-columns: 1.5fr 2fr 1.5fr;
     grid-template-rows: 20fr 50fr 20fr;
->>>>>>> 50db17836b0e0538e81750f1d28021daa06283d9
     grid-template-areas:"l m r"
                         "marginRight f marginLeft"
                         "b b b"
