@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../CSS/stylePerfil.css">
+</head>
+<body>
+    <header>
+        <div class=botaoMenu>
+            <img class="menu" src="../Assets/menu.svg" alt="menu">
+        </div>
+        <a href="telaProdutosAdmin.html">
+            <img class="logo1" src="../Assets/logo1.svg" alt="logo1">
+        </a>
+        <div class=botaoPesquisa>
+            <img class="pesquisa" src="../Assets/pesquisa.svg" alt="pesquisa">
+        </div>
+    </header>
+    <h1 class="titulo">Perfil</h1>
+    <div class="container">
+        <form id="formulario" method="POST" action="*">
+            <div class="input">
+                <label for="text">Nome</label><br>
+                <input type="nome" name="nome" value ="Nome" disabled>
+            </div>
+            <div class="input">
+                <label for="email">E-mail</label><br>
+                <input type="email" name="email" value="vitorwixmixer@gmail.com" disabled>
+            </div>
+            <div class="input">
+                <label for="text">CPF</label><br>
+                <input type="text" name="cpf" value="111.111.111-11" disabled>
+            </div>
+            <div class="input">
+                <label for="text">Senha</label><br>
+                <input type="password" name="senha" value="dadwadwada" disabled>
+            </div>
+        </form>
+        <div id="foto">
+            <img class="imgdefault" src="../Assets/userDefault.svg">
+        </div>
+        <div id="buttonLogin">
+            <button id="botaoAlterar" type="push">Alterar</button>
+            <button id="botaoAlterar" type="push">Excluir</button>
+        </div>
+    </div>
+</body>
