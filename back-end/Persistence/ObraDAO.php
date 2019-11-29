@@ -25,7 +25,7 @@
         }
 
         public function alterar($con, $obra) {
-            $query = "UPDATE obra SET nomeObra='".$obra->nomeObra."', valorEstimado=".$obra->valorEstimado.", material='".$obra->getMaterial()."', local='".$obra->getLocal()."', nomeAutor='".$obra->getNomeAutor()."', foto='".$obra->getFoto()."', altura=".$obra->getAltura().", largura=".$obra->getLargura().", tipoFundo=".$obra->getTipoFundo().", estoque=".$obra->getEstoque()." WHERE idObra=".$obra->getIdObra().";";
+            $query = "UPDATE obra SET nomeObra='".$obra->getNomeObra()."', valorEstimado=".$obra->getValorEstimado().", material='".$obra->getMaterial()."', local='".$obra->getLocal()."', nomeAutor='".$obra->getNomeAutor()."', foto='".$obra->getFoto()."', altura=".$obra->getAltura().", largura=".$obra->getLargura().", tipoFundo=".$obra->getTipoFundo().", estoque=".$obra->getEstoque()." WHERE idObra=".$obra->getIdObra().";";
             mysqli_query($con, $query);
         }
 
