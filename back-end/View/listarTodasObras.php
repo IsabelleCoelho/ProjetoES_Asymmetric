@@ -1,7 +1,12 @@
 <?php
-    include("obraClass.php");
-    $obra = new Obra();
-    $obras = $obra->recuperarTodasObras();
+    include("../Model/Obra.php");
+    include("../Persistence/ObraDAO.php");
+    include("../Persistence/Connection.php");
+    $connection = new Connection();
+    $con = $connection->openConnection();
+    $obra = new ObraDAO();
+    $obras = $obra->recuperarTodasObras($con);
+    $connection->closeConnection();
 ?>
 
 <html>
@@ -13,7 +18,7 @@
 <?php       foreach ($obras as $umaObra) { ?>
                 <div style="display:inline-block; border:2px solid black; width:150px; height:200px; background-color:grey; padding-left:10px;">
                     <img src="<?php echo 'uploads/obras/'.$umaObra->getFoto(); ?>" style="margin-left:20px; margin-top:5px; width:100px; height:100px;" /><br/>
-                    <h1 style="margin-top:2px; margin-bottom:0px;"><?php echo $umaObra->getNomeObra(); ?></h1><br/>
+                    <h2 style="margin-top:2px; margin-bottom:0px;"><?php echo $umaObra->getNomeObra(); ?></h2><br/>
                     <div style="display:inline-block;">
                         <form method="POST" action="atualizarObra.php">
                             <input type="number" name="idObra" value="<?php echo $umaObra->getIdObra(); ?>" hidden />
@@ -29,6 +34,11 @@
                     </div>
                 </div>
 <?php       } ?>
+            <a href="cadastrarObra.php">
+                <div style="display:inline-block; border:2px solid black; width:150px; height:200px; background-color:white; padding-left:10px;">
+                    <br/><br/><br/><br/><h1 style="margin-top:2px; margin-bottom:3px; margin-left:55px;">+</h1><br/><br/><br/>
+                </div>
+            </a>
         </div>
     </body>
 </html>

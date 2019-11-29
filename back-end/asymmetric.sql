@@ -1,5 +1,5 @@
 CREATE SCHEMA IF NOT EXISTS `asymmetric` DEFAULT CHARACTER SET utf8 ;
-USE `mydb`;
+USE `asymmetric`;
 
 CREATE TABLE IF NOT EXISTS `asymmetric`.`obra` (
   `idObra` INT NOT NULL AUTO_INCREMENT,
