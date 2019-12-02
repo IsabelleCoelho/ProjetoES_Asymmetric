@@ -8,9 +8,14 @@
         else {
             $i = 0;
             while (file_exists($imgDir)) {
-                $str_array = explode('.'.$imgType, $imgName);
-                $imgName = $str_array[0].'('.++$i.').'.$imgType;
+                $auxStr = '('.$i.')';
+                if (preg_match($auxStr, $imgName))
+                    $str_array = explode($auxStr, $imgName);
+                else
+                    $str_array = explode('.'.$imgType, $img);
+                $imgName = $str_array[0].'('.$i.').'.$imgType;
                 $imgDir = IMG_OBRAS_PATH.$imgName;
+                ++$i;
             }
             if (move_uploaded_file($_FILES['foto']['tmp_name'], $imgDir) === false) echo "Nao foi possivel fazer o upload da imagem!";
             else {
