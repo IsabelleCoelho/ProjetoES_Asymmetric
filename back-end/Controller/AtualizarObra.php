@@ -24,7 +24,6 @@
         include("../Persistence/Connection.php");
         $obraAtual = new Obra();
         $obraAtual->construtor($_POST['idObra'], $_POST['nomeObra'], $_POST['valorEstimado'], $_POST['material'], $_POST['local'], $_POST['nomeAutor'], $imgName, $_POST['altura'], $_POST['largura'], $_POST['tipoFundo'], $_POST['estoque']);
-        echo $obraAtual->getIdObra().' '.$obraAtual->getEstoque();
         $connection = new Connection();
         $con = $connection->openConnection();
         $obra = new ObraDAO();

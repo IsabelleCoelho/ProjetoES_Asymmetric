@@ -16,7 +16,19 @@ CREATE TABLE IF NOT EXISTS `asymmetric`.`obra` (
   INDEX (`nomeObra`))
 ENGINE = InnoDB;
 
-use `asymmetric`;
-SELECT * FROM `obra`;
-
-DROP TABLE `asymmetric`.`obra`;
+CREATE TABLE IF NOT EXISTS `asymmetric`.`cliente` (
+	`idCliente` INT NOT NULL AUTO_INCREMENT,
+    `cpf` VARCHAR(14) NOT NULL,
+    `senha` VARCHAR(32) NOT NULL,
+    `nome` VARCHAR(40) NOT NULL,
+    `email` VARCHAR(40) NOT NULL,
+    `estado` CHAR(2) NOT NULL,
+    `cidade` VARCHAR(20) NOT NULL,
+    `bairro` VARCHAR(20) NOT NULL,
+    `rua` VARCHAR(20) NOT NULL,
+    `numResidencia` INT NOT NULL,
+    `foto` VARCHAR(20) NOT NULL,
+    PRIMARY KEY (`idCliente`),
+    INDEX (`cpf`),
+    INDEX (`email`))
+ENGINE = InnoDB;
