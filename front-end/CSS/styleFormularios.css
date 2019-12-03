@@ -37,6 +37,7 @@ html, body{
 }
 
 #formulario{
+    align-self: center;
     color: #1D1D21;
     background: rgb(228, 229, 238);
     grid-area: f;
