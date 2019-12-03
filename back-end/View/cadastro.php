@@ -33,6 +33,7 @@
             <label>Foto: </label>
             <input type="file" name="foto" /><br/><br/>
             <input type="submit" name="enviarCliente" value="Enviar" />
+            <a href="login.php">Voltar</a>
         </form>
     </body>
 </html>

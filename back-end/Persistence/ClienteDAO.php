@@ -12,7 +12,7 @@
                 $cliente->setupFromSqlRow($row);
         }
 
-        public function inserir($con, $cliente) {
+        public function inserir($con, $cliente) : int{
             $query = "SELECT * FROM cliente WHERE cpf='".$cliente->getCpf()."';";
             $execute = mysqli_query($con, $query);
             if (mysqli_num_rows($execute) === 0) {
@@ -28,14 +28,19 @@
                 return 2; //Mesmo CPF
         }
 
-        public function alterar($con, $cliente) {
-            $query = "SELECT * FROM cliente WHERE email='".$cliente->getEmail()."';";
-            $execute = mysqli_query($con, $query);
-            if (mysqli_num_rows($execute) === 0) {
+        public function alterar($con, $cliente) : int{
+            $query = "SELECT * FROM cliente WHERE idCliente=".$cliente->getIdCliente()." AND email='".$cliente->getEmail()."';";
+            echo $query;
+            if (mysqli_num_rows(mysqli_query($con, $query)) === 1) {
                 $query = "UPDATE cliente SET nome='".$cliente->getNome()."', senha='".$cliente->getSenha()."', email='".$cliente->getEmail()."', estado='".$cliente->getEstado()."', cidade='".$cliente->getCidade()."', bairro='".$cliente->getBairro()."', rua='".$cliente->getRua()."', numResidencia=".$cliente->getNumResidencia().", foto='".$cliente->getFoto()."' WHERE idCliente=".$cliente->getIdCliente().";";
                 mysqli_query($con, $query);
-            } else
-                throw new Exception('sameEmailAddr');
+                return 0;
+            }
+            $query = "SELECT * FROM cliente WHERE email='".$cliente->getEmail()."';";
+            if (mysqli_num_rows(mysqli_query($con, $query)) >= 1) return 1; // Mesmo email
+            $query = "UPDATE cliente SET nome='".$cliente->getNome()."', senha='".$cliente->getSenha()."', email='".$cliente->getEmail()."', estado='".$cliente->getEstado()."', cidade='".$cliente->getCidade()."', bairro='".$cliente->getBairro()."', rua='".$cliente->getRua()."', numResidencia=".$cliente->getNumResidencia().", foto='".$cliente->getFoto()."' WHERE idCliente=".$cliente->getIdCliente().";";
+            mysqli_query($con, $query);
+            return 0;
         }
 
         public function excluir($con, $cliente) {

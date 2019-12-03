@@ -42,6 +42,7 @@
         public function setupFromSqlRow($row){
             $this->idCliente = $row['idCliente'];
             $this->cpf = $row['cpf'];
+            $this->senha = $row['senha'];
             $this->nome = $row['nome'];
             $this->email = $row['email'];
             $this->estado = $row['estado'];

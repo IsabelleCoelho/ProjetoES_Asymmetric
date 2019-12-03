@@ -1,5 +1,5 @@
 <?php
-    if (isset($_POST['enviarCliente'])) {
+    if (isset($_POST['attCliente'])) {
         if (!empty($_FILES['foto']['name'])) {
             include("globalVariables.php");
             $img = basename($_FILES['foto']['name']);
@@ -20,28 +20,31 @@
                     ++$i;
                 }
                 if (move_uploaded_file($_FILES['foto']['tmp_name'], $imgDir) === false) die("Nao foi possivel fazer o upload da imagem!");
+                else unlink(IMG_USER_PATH.$_POST['bkpFoto']);
             }
         } else
-            $imgName = "default.png";
+            $imgName = $_POST['bkpFoto'];
         include("../Model/Cliente.php");
         include("../Persistence/ClienteDAO.php");
         include("../Persistence/Connection.php");
+        session_start();
         $cliente = new Cliente();
-        $cliente->construtor(0, $_POST['cpf'], $_POST['nome'], $_POST['email'], $_POST['estado'], $_POST['cidade'], $_POST['bairro'], $_POST['rua'], $_POST['numResidencia'], $imgName);
-        $cliente->setSenha(md5("A1ENCTYPE092".$_POST['senha']));
+        $cliente->construtor($_SESSION['usrId'], "", $_POST['nome'], $_POST['email'], $_POST['estado'], $_POST['cidade'], $_POST['bairro'], $_POST['rua'], $_POST['numResidencia'], $imgName);
+        if (isset($_POST['senha']))
+            $cliente->setSenha(md5("A1ENCTYPE092".$_POST['senha']));
+        else
+            $cliente->setSenha($_POST['bkpSenha']);
         $connection = new Connection();
         $con = $connection->openConnection();
         $clienteDao = new ClienteDAO();
-        $res = $clienteDao->inserir($con, $cliente);
+        $res = $clienteDao->alterar($con, $cliente);
         $connection->closeConnection();
-        session_start();
-        if ($res === 0) {
-            $_SESSION['success'] = 1;
-            header("Location: ../View/login.php");
-        } else {
-            if (isset($imgDir)) unlink($imgDir);
+        if ($res === 0)
+            header("Location: ../View/perfil.php");
+        else {
+            if (!empty($_FILES['foto']['name'])) unlink($imgDir);
             $_SESSION['err'] = $res;
-            header("Location: ../View/cadastro.php");
+            header("Location: ../View/editar-dados.php");
         }
     }
 ?>
