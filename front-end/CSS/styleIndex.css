@@ -27,36 +27,66 @@ header{
     height: 45px;
     background-color: transparent;
 }
-.botaoMenu{
+.botaoCarrinho{
     width: 40px;
     height: 40px;
 }
-.botaoPesquisa{
-    width: 40px;
-    height: 40px;
-}
-.botaoPesquisa:hover{
+.botaoCarrinho:hover{
     background-color:#333;
     border-radius:20px;
 }
-.pesquisa{
+.carrinho{
     cursor: pointer;
     background-color: transparent;
     height: 24px;
     margin-top: 8px;
     margin-left: 8px;
 }
-.menu{
+.botaoPerfil{
+    width: 40px;
+    height: 40px;
+}
+.perfil{
+    cursor: pointer;
+    background-color: rgba(203,205,226,1);
+    height: 24px;
+    margin-top: 8px;
+    margin-left: 8px;
+    border-radius:20px;
+}
+.botaoPerfil:hover{
+    background-color:#333;
+    border-radius:20px;
+}
+.botaoHistorico{
+    width: 40px;
+    height: 40px;
+}
+.botaoHistorico:hover{
+    background-color:#333;
+    border-radius:20px;
+}
+.historico{
     cursor: pointer;
     background-color: transparent;
     height: 24px;
     margin-top: 8px;
     margin-left: 8px;
 }
-
-.botaoMenu:hover{
+.botaoSair{
+    width: 40px;
+    height: 40px;
+}
+.botaoSair:hover{
     background-color:#333;
     border-radius:20px;
+}
+.sair{
+    cursor: pointer;
+    background-color: transparent;
+    height: 24px;
+    margin-top: 8px;
+    margin-left: 8px;
 }
 body{
     background: rgb(29,29,33)!important;
@@ -95,58 +125,4 @@ body{
     margin-bottom: 90px;
 }
 
-.menuAdmin{
-    grid-area: marginLeft;
-    margin-right: 24px;
-    margin-top:24px;
-    width: 60px;
-    height: 50px;
-    display: none;
-    border-radius: 2px;
-    background-color: white;
-    position: absolute;
-    top: 90px;
-    right: 40px;
-    z-index: 1;
-}
 
-.menuAdmin.open {
-    display: block;
-}
-
-.menuAdmin1 ul{
-    align-items: center;
-    list-style: none;
-}
-.menuAdmin1 li{
-    padding: 5px;
-    font-size: 14px;
-}
-.menuAdmin1 a{
-    text-decoration: none;
-    color: #1D1D21;
-    text-align: center;
-}
-.menuAdmin1 li:hover{
-    background-color: lightgrey;
-}
-
-.menuAdminBotao {
-    width: 20px;
-    height: 20px;
-    z-index: 0;
-    position: absolute;
-    top: 125px;
-    right: 45px;
-}
-
-.menuAdminBotao img:hover {
-    cursor: pointer;
-    opacity: .8;
-}
-
-#addProduto{
-    text-decoration: none;
-    font-size:20px;
-    color:rgba(203,205,226,1);
-}
