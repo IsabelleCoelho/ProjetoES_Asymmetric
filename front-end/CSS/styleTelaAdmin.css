@@ -4,7 +4,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-
+    font-family: 'Nunito', sans-serif;
 }
 
 header{
@@ -52,7 +52,7 @@ body{
     display: grid;
     grid-template-columns: 0.25fr 2.25fr 2.25fr 0.25fr;
     grid-template-rows: 10fr 80fr 10fr;
-    grid-template-areas:"l m m r"
+    grid-template-areas:"l L R r"
                         "marginRight picture description marginLeft"
                         "bottomRight b b bottomLeft";
 }
@@ -134,4 +134,22 @@ body{
     text-decoration: none;
     font-size:20px;
     color:rgba(203,205,226,1);
+}
+
+button{
+    background: transparent;
+    color:rgb(29, 29, 31);
+    border-radius: 10px;
+    flex: 1;
+    font-weight: bold;
+    margin: 10px;
+    border-color: rgb(29, 29, 31);
+    box-shadow: 0px;
+    font-size: 20px;
+    padding: 10px;
+}
+
+button:hover{
+    background-color:rgba(55, 55, 58, 0.705);
+    color: rgb(228, 229, 238);
 }
