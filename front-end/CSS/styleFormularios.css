@@ -101,6 +101,8 @@ button{
     margin: 10px;
     border-color: rgb(55, 55, 58);
     box-shadow: 0px;
+    padding: 8px 18px;
+    margin-right: 20px;
 }
 
 button:hover{
