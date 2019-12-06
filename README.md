@@ -34,7 +34,13 @@ O cliente poderá comprar uma ou mais obras e terá um perfil, o qual poderá al
 	|-- Diagrama de Classe
 	|-- Diagrama de Implantação
 |-- back-end
-	|-- PHP
+	|-- View
+	|-- Controller
+	|-- Model
+	|-- Persistence
+	|-- Uploads
+		|-- Obras
+		|-- Cliente
 |-- front-end
 	|-- HTML
 	|-- CSS
