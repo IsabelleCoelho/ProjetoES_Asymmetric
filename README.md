@@ -9,7 +9,6 @@ O cliente poderá comprar uma ou mais obras e terá um perfil, o qual poderá al
 
 ## Tecnologias Utilizadas
 - HTML5 e CSS3
-- Jquery 3.4.1
 - PHP versão 7.3.5
 - Apache2 versão 2.4.29
 - MySQL versão 5.7.27
@@ -39,6 +38,5 @@ O cliente poderá comprar uma ou mais obras e terá um perfil, o qual poderá al
 |-- front-end
 	|-- HTML
 	|-- CSS
-	|-- JS
 	|-- Assets
 |-- Padrões adotados
