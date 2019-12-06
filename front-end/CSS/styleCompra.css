@@ -97,7 +97,7 @@ header{
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 25fr 25fr 25fr;
     grid-template-areas:"1 2 3 4"
-                        "marginRight f marginLeft"
+                        "marginLeft mL mR marginRight"
                         "b b b b"
 }
 h1{
@@ -145,4 +145,7 @@ input{
     padding-top: 70px;
     padding-left:40%;
     
+}
+.remover{
+    grid-area: marginRight;
 }
