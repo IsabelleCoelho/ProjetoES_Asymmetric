@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../CSS/stylePerfil.css">
+</head>
+<body>
+    <header>
+        <div class=botaoPerfil>
+            <img class="perfil" src="../Assets/userDefault.svg" alt="perfil">
+        </div>
+        <div class=botaoSair>
+            <img class="sair" src="../Assets/sair.svg" alt="sair" aligm="center">
+        </div>
+        <a href="index.html">
+            <img class="logo1" src="../Assets/logo1.svg" alt="logo1">
+        </a>
+        <div class=botaoHistorico>
+            <img class="historico" src="../Assets/historico.svg" alt="historico">
+        </div>
+        <div class=botaoCarrinho>
+            <img class="carrinho" src="../Assets/carrinho.svg" alt="carrinho">
+        </div>
+    </header>
+    <h1 class="titulo">Perfil</h1>
+    <div class="container">
+        <form id="formulario" method="POST" action="*">
+            <div class="input">
+                <label for="text">Nome</label><br>
+                <input type="nome" name="nome" value ="Nome" disabled>
+            </div>
+            <div class="input">
+                <label for="email">E-mail</label><br>
+                <input type="email" name="email" value="vitorwixmixer@gmail.com" disabled>
+            </div>
+            <div class="input">
+                <label for="text">CPF</label><br>
+                <input type="text" name="cpf" value="111.111.111-11" disabled>
+            </div>
+            <div class="input">
+                <label for="text">Senha</label><br>
+                <input type="password" name="senha" value="dadwadwada" disabled>
+            </div>
+        </form>
+        <div id="foto">
+            <img class="imgdefault" src="../Assets/userDefault.svg">
+        </div>
+        <div id="buttonLogin">
+            <button id="botaoAlterar" type="push">Alterar</button>
+            <button id="botaoAlterar" type="push">Excluir</button>
+        </div>
+    </div>
+</body>

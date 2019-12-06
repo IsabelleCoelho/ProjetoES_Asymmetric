@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="../CSS/styleFormularios.css" />
+  </head>
+  <body>
+    <div class="conteinerFormulario">
+      <div id="logo">
+          <img class="logo1" src="../Assets/logo.png" alt="logo1">
+      </div>
+      <form id="formulario" method="POST" action="*">
+        <h1 class="titulo">Cadastro de Produto</h1>
+        <div class="input">
+          <label for="text">Nome</label><br>
+          <input type="text" name="nomeObra" required>
+        </div>
+        <div class="input">
+          <label for="text">Artista</label><br>
+          <input type="text" name="Artista" required>
+        </div>
+        <div class="input">
+          <label for="text">Local</label><br>
+          <input type="text" name="local" required>
+        </div>
+        <div class="input">
+          <label for="text">Material</label><br>
+          <input type="text" name="material" required>
+        </div>
+        <div class="input">
+          <label for="text">Altura</label><br>
+          <input type="text" name="altura" required>
+        </div>
+        <div class="input">
+          <label for="text">Largura</label><br>
+          <input type="text" name="largura" required>
+        </div>
+        <div class="input">
+          <label for="number">Valor</label><br>
+          <input type="number" step="0.0001" name="valor" min="0.0000" required>
+        </div>
+        <div class="input">
+          <label for="file">Foto</label><br>
+          <input type="file" name="foto">
+        </div>
+        <div id="botoes">
+          <button type="push" style="padding: 8px 18px; margin-right: 20px;">Cancelar</button>
+          <button type="submit" style="padding: 8px 18px; margin-right: 20px;">Confirmar</button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
