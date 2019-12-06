@@ -10,11 +10,7 @@
             else {
                 $i = 0;
                 while (file_exists($imgDir)) {
-                    $auxStr = '('.$i.')';
-                    if (preg_match($auxStr, $imgName))
-                        $str_array = explode($auxStr, $imgName);
-                    else
-                        $str_array = explode('.'.$imgType, $img);
+                    $str_array = explode('.'.$imgType, $img);
                     $imgName = $str_array[0].'('.$i.').'.$imgType;
                     $imgDir = IMG_OBRAS_PATH.$imgName;
                     ++$i;
@@ -28,12 +24,12 @@
         include("../Persistence/ObraDAO.php");
         include("../Persistence/Connection.php");
         $obraAtual = new Obra();
-        $obraAtual->construtor($_POST['idObra'], $_POST['nomeObra'], $_POST['valorEstimado'], $_POST['material'], $_POST['local'], $_POST['nomeAutor'], $imgName, $_POST['altura'], $_POST['largura'], $_POST['tipoFundo'], $_POST['estoque']);
+        $obraAtual->construtor($_POST['idObra'], $_POST['nomeObra'], $_POST['valorEstimado'], $_POST['material'], $_POST['local'], $_POST['nomeAutor'], $imgName, $_POST['altura'], $_POST['largura'], $_POST['estoque']);
         $connection = new Connection();
         $con = $connection->openConnection();
         $obra = new ObraDAO();
         $obra->alterar($con, $obraAtual);
         $connection->closeConnection();
-        header("Location: ../View/listarTodasObras.php");
+        header("Location: ../View/admin-page.php");
     }
 ?>

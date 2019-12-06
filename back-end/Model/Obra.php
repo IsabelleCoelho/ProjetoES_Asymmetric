@@ -9,7 +9,6 @@
         private $foto;
         private $altura;
         private $largura;
-        private $tipoFundo;
         private $estoque;
 
         public function Obra() {
@@ -22,11 +21,10 @@
             $this->foto = "";
             $this->altura = 0.0;
             $this->largura = 0.0;
-            $this->tipoFundo = 1;
             $this->estoque = 1;
         }
 
-        public function construtor(int $idObra, String $nomeObra, int $valorEstimado, String $material, String $local, String $nomeAutor, String $foto, float $altura, float $largura, int $tipoFundo, int $estoque) {
+        public function construtor(int $idObra, String $nomeObra, int $valorEstimado, String $material, String $local, String $nomeAutor, String $foto, float $altura, float $largura, int $estoque) {
             $this->idObra = $idObra;
             $this->nomeObra = $nomeObra;
             $this->valorEstimado = $valorEstimado;
@@ -36,7 +34,6 @@
             $this->foto = $foto;
             $this->altura = $altura;
             $this->largura = $largura;
-            $this->tipoFundo = $tipoFundo;
             $this->estoque = $estoque;
         }
 
@@ -50,7 +47,6 @@
             $this->foto = $rowObra['foto'];
             $this->altura = $rowObra['altura'];
             $this->largura = $rowObra['largura'];
-            $this->tipoFundo = $rowObra['tipoFundo'];
             $this->estoque = $rowObra['estoque'];
         }
 
@@ -63,7 +59,6 @@
         public function getFoto() { return $this->foto; }
         public function getAltura() { return $this->altura; }
         public function getLargura() { return $this->largura; }
-        public function getTipoFundo() { return $this->tipoFundo; }
         public function getEstoque() { return $this->estoque; }
 
         public function setIdObra(int $idObra) { $this->idObra = $idObra; }

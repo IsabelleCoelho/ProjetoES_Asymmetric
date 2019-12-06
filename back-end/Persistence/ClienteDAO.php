@@ -8,8 +8,11 @@
 
         public function recuperarPorCpf($con, $cliente) {
             $query = "SELECT * FROM cliente WHERE cpf='".$cliente->getCpf()."';";
-            if ($row = mysqli_fetch_assoc(mysqli_query($con, $query)))
+            if ($row = mysqli_fetch_assoc(mysqli_query($con, $query))) {
                 $cliente->setupFromSqlRow($row);
+                return true;
+            }
+            return false;
         }
 
         public function inserir($con, $cliente) : int{

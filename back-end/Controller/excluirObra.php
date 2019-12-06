@@ -12,7 +12,7 @@
         $obraDAO = new ObraDAO();
         $obraDAO->excluir($con, $obra);
         $connection->closeConnection();
-        header("Location: ../View/listarTodasObras.php");
+        header("Location: ../View/admin-page.php");
     } else
         echo "Nao eh possivel excluir uma obra inexistente!";
 ?>

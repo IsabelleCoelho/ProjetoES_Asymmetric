@@ -28,7 +28,7 @@
                                 </form>
                             </div>
                             <div style="display:inline-block; margin-left:15px;">
-                                <form method="POST" action="excluirObra.php">
+                                <form method="POST" action="../Controller/excluirObra.php">
                                     <input type="text" name="foto" value="<?php echo $umaObra->getFoto(); ?>" hidden />
                                     <input type="number" name="idObra" value="<?php echo $umaObra->getIdObra(); ?>" hidden />
                                     <input type="submit" name="excluirObra" style="background-image:url('../imgs/delete2.png'); width:25px; height:25px; border : none; color : transparent;" />

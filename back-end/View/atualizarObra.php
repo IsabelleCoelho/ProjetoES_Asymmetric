@@ -36,21 +36,6 @@
                     <input type="number" step="0.01" name="largura" value="<?php echo $obraAtual->getLargura(); ?>" required /><br/>
                     <label>Estoque: </label>
                     <input type="number", name="estoque" value="<?php echo $obraAtual->getEstoque(); required ?>" /><br/>
-                    <label>Tipo de fundo: </label><br/>
-<?php               $tipoFundo = $obraAtual->getTipoFundo();
-                    if ($tipoFundo == 1) { ?>
-                        <input type="radio" name="tipoFundo" value="1" checked> Tipo 1<br/>
-                        <input type="radio" name="tipoFundo" value="2"> Tipo 2<br/>
-                        <input type="radio" name="tipoFundo" value="3"> Tipo 3<br/><br/>
-<?php               } else if ($tipoFundo == 2) { ?>
-                        <input type="radio" name="tipoFundo" value="1"> Tipo 1<br/>
-                        <input type="radio" name="tipoFundo" value="2" checked> Tipo 2<br/>
-                        <input type="radio" name="tipoFundo" value="3"> Tipo 3<br/><br/>
-<?php               } else { ?>
-                        <input type="radio" name="tipoFundo" value="1"> Tipo 1<br/>
-                        <input type="radio" name="tipoFundo" value="2"> Tipo 2<br/>
-                        <input type="radio" name="tipoFundo" value="3" checked> Tipo 3<br/><br/>
-<?php               } ?>
                     <input type="number" name="idObra" value="<?php echo $_POST['idObra']; ?>" hidden />
                     <input type="text" name="atualizarObra" hidden />
                     <input type="submit" name="enviarObra" value="Enviar" />

@@ -22,10 +22,6 @@
             <input type="number" step="0.01" placeholder="3.75" name="largura" required /><br/>
             <label>Estoque: </label>
             <input type="number" value="1" name="estoque" required /><br/>
-            <label>Tipo de fundo: </label><br/>
-            <input type="radio" name="tipoFundo" value="1" checked> Tipo 1<br/>
-            <input type="radio" name="tipoFundo" value="2"> Tipo 2<br/>
-            <input type="radio" name="tipoFundo" value="3"> Tipo 3<br/><br/>
             <input type="submit" name="enviarObra" value="Enviar" />
         </form>
     </body>
