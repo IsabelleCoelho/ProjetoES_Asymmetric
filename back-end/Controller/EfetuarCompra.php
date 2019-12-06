@@ -30,7 +30,7 @@
         $compra->setDataCompra();
         $compraDao = new CompraDAO();
         $compraDao->inserir($con, $compra);
-        $idCompra = $compraDao->recuperarIdCompraAtual();
+        $compraDao->recuperarIdCompraAtual($con);
         $comprar = new Comprar();
         $comprarDao = new ComprarDAO();
         foreach ($_SESSION['carrinho'] as $cartItem) {

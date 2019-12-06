@@ -6,7 +6,7 @@
                 $compra->setupFromSqlRow($row);
         }
 
-        public function recuperarIdCompraAtual() {
+        public function recuperarIdCompraAtual($con) {
             $query = "SELECT MAX(idCompra) AS max_id FROM compra;";
             $row = mysqli_fetch_array(mysqli_query($con, $query));
             return $row['max_id'];
