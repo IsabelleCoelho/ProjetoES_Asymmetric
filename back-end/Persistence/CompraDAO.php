@@ -1,10 +1,11 @@
 <?php
     class CompraDAO {
-        public function recuperarPorCpf($con, $compra) {
-            $query = "SELECT * FROM compra WHERE cpf=".$compra->getCpf()." ORDER BY idCompra DESC;";
+        public function recuperarCompras($con, $compra) {
+            $query = "SELECT * FROM compra WHERE idCliente=".$compra->getIdCliente()." ORDER BY idCompra DESC;";
+            $execute = mysqli_query($con, $query);
             $compras = array();
             $i = 0;
-            while ($row = mysqli_fetch_assoc(mysqli_query($con, $query))) {
+            while ($row = mysqli_fetch_assoc($execute)) {
                 $compras[$i] = new Compra();
                 $compras[$i]->setupFromSqlRow($row);
                 ++$i;
@@ -19,7 +20,7 @@
         }
         
         public function inserir($con, $compra){
-            $query = "INSERT INTO compra(cpf, cpfDestinatario, status, dataCompra, valorTotal) VALUES ('".$compra->getCpfCliente()."', '".$compra->getCpfDestinatario()."', '".$compra->getStatus()."', '".$compra->getDataCompra()."', ".$compra->getValorTotal().");";
+            $query = "INSERT INTO compra(idCliente, cpf, cpfDestinatario, status, dataCompra, valorTotal) VALUES (".$compra->getIdCliente().", '".$compra->getCpfCliente()."', '".$compra->getCpfDestinatario()."', '".$compra->getStatus()."', '".$compra->getDataCompra()."', ".$compra->getValorTotal().");";
             mysqli_query($con, $query);
         }
 

@@ -17,7 +17,6 @@
         }
 
         public function setupFromSqlRow($row){
-            $this->idCompra = $row['idCompra'];
             $this->idObra = $row['idObra'];
             $this->quantidade = $row['quantidade'];
         }

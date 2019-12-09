@@ -1,10 +1,19 @@
 <?php
     class ComprarDAO {
-        public function recuperar($con, $compra) {
-            $query = "SELECT * FROM compra WHERE idCompra=".$compra->getIdCompra().";";
+        public function recuperar($con, $comprar) {
+            $query = "SELECT * FROM obra o INNER JOIN comprar c ON o.idObra = c.idObra WHERE idCompra=".$comprar->getIdCompra().";";
             $execute = mysqli_query($con, $query);
-            if ($row = mysqli_fetch_assoc(mysqli_query($con, $query)))
-                $compra->setupFromSqlRow($row);
+            $compras = array(array(
+                'nomeObra' => "",
+                'qntd' => 0,
+            ));
+            $i = 0;
+            while ($row = mysqli_fetch_assoc($execute)) {
+                $compras[$i]['nomeObra'] = $row['nomeObra'];
+                $compras[$i]['qntd'] = $row['qntd'];
+                ++$i;
+            }
+            return $compras;
         }
 
         public function inserir($con, $comprar) {

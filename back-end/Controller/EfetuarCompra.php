@@ -30,7 +30,7 @@
         foreach ($_SESSION['carrinho'] as $cartItem)
             $valorTotal += $cartItem['preco']*$cartItem['qntd'];
         $compra = new Compra();
-        $compra->construtor($cpfCliente, $cpfDest, $valorTotal);
+        $compra->construtor($cliente->getIdCliente(), $cpfCliente, $cpfDest, $valorTotal);
         $compraDao = new CompraDAO();
         $compraDao->inserir($con, $compra);
         $idCompra = $compraDao->recuperarIdCompraAtual($con);

@@ -2,9 +2,10 @@
     class ObraDAO {
         public function recuperarTodasObras($con) {
             $query = "SELECT * FROM obra ORDER BY idObra;";
+            $execute = mysqli_query($con, $query);
             $obras = array();
             $i = 0;
-            while ($rowObra = mysqli_fetch_assoc(mysqli_query($con, $query))) {
+            while ($rowObra = mysqli_fetch_assoc($execute)) {
                 $obras[$i] = new Obra();
                 $obras[$i]->setupFromSqlRow($rowObra);
                 ++$i;

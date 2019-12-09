@@ -35,16 +35,17 @@ ENGINE = InnoDB;
 
 CREATE TABLE IF NOT EXISTS asymmetric.compra (
 	idCompra INT NOT NULL AUTO_INCREMENT,
+    idCliente INT,
     cpf VARCHAR(14) NOT NULL,
     cpfDestinatario VARCHAR(14) NOT NULL,
     `status` CHAR(1) NOT NULL,
     dataCompra VARCHAR(10) NOT NULL,
     valorTotal BIGINT NOT NULL,
 	PRIMARY KEY (idCompra),
-    CONSTRAINT fk_cliente_cpf
-		FOREIGN KEY (cpf)
-        REFERENCES cliente (cpf)
-        ON DELETE CASCADE)
+    CONSTRAINT fk_cliente_id
+		FOREIGN KEY (idCliente)
+        REFERENCES cliente (idCliente)
+        ON DELETE SET NULL)
 ENGINE = InnoDB;
 
 CREATE TABLE IF NOT EXISTS asymmetric.comprar (
@@ -63,11 +64,18 @@ CREATE TABLE IF NOT EXISTS asymmetric.comprar (
 ENGINE = InnoDB;
 
 use asymmetric;
-SELECT * FROM obra;
+SELECT * FROM obra ORDER BY idObra;
 SELECT * FROM cliente;
 SELECT * FROM compra;
 SELECT * FROM comprar;
+
+SELECT * FROM compra WHERE idCliente=2 ORDER BY idCompra DESC;
+SELECT * FROM obra o INNER JOIN comprar c ON o.idObra = c.idObra WHERE idCompra=2;
+
+SELECT MAX(idCompra) AS maxId FROM compra;
 SELECT MAX(idObra) FROM obra;
+
+INSERT INTO compra(idCliente, cpf, cpfDestinatario, status, dataCompra, valorTotal) VALUES (1, 'ff', 'ff', 'p', '11/11/2011', 1234);
 
 DROP TABLE asymmetric.obra;
 DROP TABLE asymmetric.cliente;

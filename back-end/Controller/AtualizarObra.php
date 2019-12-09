@@ -3,15 +3,14 @@
         if (!empty($_FILES['foto']['name'])) {
             include("globalVariables.php");
             $img = basename($_FILES['foto']['name']);
-            $imgName = $img;
             $imgDir = IMG_OBRAS_PATH.$img;
             $imgType = strtolower(pathinfo($imgDir, PATHINFO_EXTENSION));
+            $nameAux = basename($_FILES['foto']['name'], '.'.$imgType);
             if (($imgType != "jpg" && $imgType != "png" && $imgType != "svg")) die("O arquivo nao e' uma imagem ou não atende aos formatos PNG, SVG ou JPG!");
             else {
                 $i = 0;
                 while (file_exists($imgDir)) {
-                    $str_array = explode('.'.$imgType, $img);
-                    $imgName = $str_array[0].'('.$i.').'.$imgType;
+                    $imgName = $nameAux.'('.$i.').'.$imgType;
                     $imgDir = IMG_OBRAS_PATH.$imgName;
                     ++$i;
                 }
