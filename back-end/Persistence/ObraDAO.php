@@ -2,10 +2,9 @@
     class ObraDAO {
         public function recuperarTodasObras($con) {
             $query = "SELECT * FROM obra ORDER BY idObra;";
-            $execute = mysqli_query($con, $query);
             $obras = array();
             $i = 0;
-            while ($rowObra = mysqli_fetch_assoc($execute)) {
+            while ($rowObra = mysqli_fetch_assoc(mysqli_query($con, $query))) {
                 $obras[$i] = new Obra();
                 $obras[$i]->setupFromSqlRow($rowObra);
                 ++$i;
@@ -26,6 +25,13 @@
 
         public function alterar($con, $obra) {
             $query = "UPDATE obra SET nomeObra='".$obra->getNomeObra()."', valorEstimado=".$obra->getValorEstimado().", material='".$obra->getMaterial()."', local='".$obra->getLocal()."', nomeAutor='".$obra->getNomeAutor()."', foto='".$obra->getFoto()."', altura=".$obra->getAltura().", largura=".$obra->getLargura().", estoque=".$obra->getEstoque()." WHERE idObra=".$obra->getIdObra().";";
+            mysqli_query($con, $query);
+        }
+
+        public function alterarEstoque($con, $obra) {
+            $query = "SELECT estoque FROM obra WHERE idObra=".$obra->getIdObra().";";
+            $novoEstoque = ((mysqli_fetch_assoc(mysqli_query($con, $query)))['estoque'] - $obra->getEstoque());
+            $query = "UPDATE obra SET estoque=".$novoEstoque." WHERE idObra=".$obra->getIdObra().";";
             mysqli_query($con, $query);
         }
 

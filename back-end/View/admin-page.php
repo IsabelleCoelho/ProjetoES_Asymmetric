@@ -17,6 +17,9 @@
             </head>
             <body>
                 <div style="padding-left:20%; padding-right:20%;">
+                    <div style="width:100%; height:30px; background-color:grey; margin-bottom:10px;">
+                        <a href="../Controller/Logout.php" style="color:white; margin-left:66%;">Logout</a>
+                    </div>
 <?php               foreach ($obras as $umaObra) { ?>
                         <div style="display:inline-block; border:2px solid black; width:150px; height:200px; background-color:grey; padding-left:10px;">
                             <img src="<?php echo "../uploads/obras/".$umaObra->getFoto(); ?>" style="margin-left:20px; margin-top:5px; width:100px; height:100px;" /><br/>

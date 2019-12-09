@@ -39,6 +39,7 @@ CREATE TABLE IF NOT EXISTS asymmetric.compra (
     cpfDestinatario VARCHAR(14) NOT NULL,
     `status` CHAR(1) NOT NULL,
     dataCompra VARCHAR(10) NOT NULL,
+    valorTotal BIGINT NOT NULL,
 	PRIMARY KEY (idCompra),
     CONSTRAINT fk_cliente_cpf
 		FOREIGN KEY (cpf)
@@ -64,7 +65,8 @@ ENGINE = InnoDB;
 use asymmetric;
 SELECT * FROM obra;
 SELECT * FROM cliente;
-
+SELECT * FROM compra;
+SELECT * FROM comprar;
 SELECT MAX(idObra) FROM obra;
 
 DROP TABLE asymmetric.obra;

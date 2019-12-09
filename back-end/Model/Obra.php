@@ -62,5 +62,6 @@
         public function getEstoque() { return $this->estoque; }
 
         public function setIdObra(int $idObra) { $this->idObra = $idObra; }
+        public function setEstoque(int $estoque) { $this->estoque = $estoque; }
     }
 ?>

@@ -3,9 +3,11 @@
         include("../Model/Compra.php");
         include("../Model/Cliente.php");
         include("../Model/Comprar.php");
+        include("../Model/Obra.php");
         include("../Persistence/CompraDAO.php");
         include("../Persistence/ClienteDAO.php");
         include("../Persistence/ComprarDAO.php");
+        include("../Persistence/ObraDAO.php");
         include("../Persistence/Connection.php");
         session_start();
         $cliente = new Cliente();
@@ -24,20 +26,27 @@
                 $cpfDest = $cpfCliente;
         } else
             $cpfDest = $cpfCliente;
+        $valorTotal = 0;
+        foreach ($_SESSION['carrinho'] as $cartItem)
+            $valorTotal += $cartItem['preco']*$cartItem['qntd'];
         $compra = new Compra();
-        $compra->setCpfCliente($cpfCliente);
-        $compra->setCpfDestinatario($cpfDest);
-        $compra->setDataCompra();
+        $compra->construtor($cpfCliente, $cpfDest, $valorTotal);
         $compraDao = new CompraDAO();
         $compraDao->inserir($con, $compra);
-        $compraDao->recuperarIdCompraAtual($con);
+        $idCompra = $compraDao->recuperarIdCompraAtual($con);
         $comprar = new Comprar();
+        $obra = new Obra();
         $comprarDao = new ComprarDAO();
+        $obraDao = new ObraDAO();
         foreach ($_SESSION['carrinho'] as $cartItem) {
-            $comprar->construtor($idCompra, $cartItem['id'], $cartItem['qntd']);
+            $obra->setIdObra($cartItem['id']);
+            $obra->setEstoque($cartItem['qntd']);
+            $comprar->construtor($idCompra, $obra->getIdObra(), $obra->getEstoque());
             $comprarDao->inserir($con, $comprar);
+            $obraDao->alterarEstoque($con, $obra);
         }
         $connection->closeConnection();
+        unset($_SESSION['carrinho']);
         header("Location: ../View/index.php");
     }
 ?>
