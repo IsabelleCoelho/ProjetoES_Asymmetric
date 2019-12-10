@@ -19,10 +19,11 @@
                 <div style="padding-left:20%; padding-right:20%;">
                     <div style="width:100%; height:30px; background-color:grey; margin-bottom:10px;">
                         <a href="editar-dados.php" style="color:white; margin-left:10%;">Perfil</a>
+                        <a href="historicoCompras.php" style="color:white; margin-left:50px;">Historico</a>
 <?php                   if (isset($_SESSION['carrinho'])) {
-                            echo '<a href="carrinho.php" style="color:white; margin-left:20%;">Carrinho: '.count($_SESSION['carrinho']).' itens</a>';
+                            echo '<a href="carrinho.php" style="color:white; margin-left:100px;">Carrinho: '.count($_SESSION['carrinho']).' itens</a>';
                         } else {
-                            echo '<a href="carrinho.php" style="color:white; margin-left:20%;">Carrinho vazio.</a>';
+                            echo '<a href="carrinho.php" style="color:white; margin-left:100px;">Carrinho vazio.</a>';
                         } ?>
                         <a href="../Controller/Logout.php" style="color:white; margin-right:10%; float:right;">Logout</a>
                     </div>

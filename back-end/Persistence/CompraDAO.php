@@ -29,6 +29,11 @@
             mysqli_query($con, $query);
         }
 
+        public function atualizarStatus($con, $compra) {
+            $query = "UPDATE compra SET status='".$compra->getStatus()."' WHERE idCompra=".$compra->getIdCompra().";";
+            mysqli_query($con, $query);
+        }
+
         public function excluir($con, $compra) {
             $query = "DELETE FROM compra WHERE idCompra=".$compra->getIdCompra().";";
             mysqli_query($con, $query);

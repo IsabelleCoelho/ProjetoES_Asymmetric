@@ -10,7 +10,7 @@
             $i = 0;
             while ($row = mysqli_fetch_assoc($execute)) {
                 $compras[$i]['nomeObra'] = $row['nomeObra'];
-                $compras[$i]['qntd'] = $row['qntd'];
+                $compras[$i]['qntd'] = $row['quantidade'];
                 ++$i;
             }
             return $compras;
