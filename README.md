@@ -45,4 +45,14 @@ O cliente poderá comprar uma ou mais obras e terá um perfil, o qual poderá al
 	|-- HTML
 	|-- CSS
 	|-- Assets
+|-- integrado
+	|-- View
+		|-- CSS	
+		|-- Assets
+	|-- Controller
+	|-- Model
+	|-- Persistence
+	|-- Uploads
+		|-- Obras
+		|-- Cliente
 |-- Padrões adotados
