@@ -11,39 +11,65 @@
         $obra->recuperar($con, $obraAtual);
         $connection->closeConnection();
 ?>
-        <html>
-            <head>
-                <title>Atualizar obra</title>
-            </head>
-            <body>
-                <form method="POST" action="../Controller/AtualizarObra.php" enctype="multipart/form-data">
-                    <label>Nome da obra: </label>
-                    <input type="text" name="nomeObra" value="<?php echo $obraAtual->getNomeObra(); ?>" required /><br/>
-                    <label>Valor estimado: </label>
-                    <input type="number" name="valorEstimado" value="<?php echo $obraAtual->getValorEstimado(); ?>" required /><br/>
-                    <label>Material: </label>
-                    <input type="text" name="material" value="<?php echo $obraAtual->getMaterial(); ?>" required /><br/>
-                    <label>Local: </label>
-                    <input type="text" name="local" value="<?php echo $obraAtual->getLocal(); ?>" required /><br/>
-                    <label>Nome do Autor: </label>
-                    <input type="text" name="nomeAutor" value="<?php echo $obraAtual->getNomeAutor(); ?>" required /> <br/>
-                    <label>Foto: </label>
-                    <input type="text" name="bkpFoto" value="<?php echo $obraAtual->getFoto(); ?>" hidden />
-                    <input type="file" name="foto" /><br/>
-                    <label>Altura: </label>
-                    <input type="number" step="0.01" name="altura" value="<?php echo $obraAtual->getAltura(); ?>" required /><br/>
-                    <label>Largura: </label>
-                    <input type="number" step="0.01" name="largura" value="<?php echo $obraAtual->getLargura(); ?>" required /><br/>
-                    <label>Estoque: </label>
-                    <input type="number", name="estoque" value="<?php echo $obraAtual->getEstoque(); ?>" required /><br/>
-                    <input type="number" name="idObra" value="<?php echo $_POST['idObra']; ?>" hidden />
-                    <input type="text" name="atualizarObra" hidden />
-                    <input type="submit" name="enviarObra" value="Enviar" />
-                </form>
-            </body>
-        </html>
+
+  <html>
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="../CSS/styleFormularios.css" />
+  </head>
+  <body>
+    <div class="conteinerFormulario">
+      <div id="logo">
+          <img class="logo1" src="../Assets/logo.png" alt="logo1">
+      </div>
+      <form id="formulario" method="POST" action="*">
+        <h1 class="titulo">Alterar Produtos</h1>
+        <div class="input">
+          <label for="text">Nome</label><br>
+          <input type="text" name="nomeObra" value="<?php echo $obraAtual->getNomeObra(); ?>" required>
+        </div>
+        <div class="input">
+          <label for="text">Artista</label><br>
+          <input type="text" name="nomeAutor" value="<?php echo $obraAtual->getNomeAutor(); ?>" required>
+        </div>
+        <div class="input">
+          <label for="text">Local</label><br>
+          <input type="text" name="local" value="<?php echo $obraAtual->getLocal(); ?>" required>
+        </div>
+        <div class="input">
+          <label for="text">Material</label><br>
+          <input type="text" name="material" value="<?php echo $obraAtual->getMaterial(); ?>" required>
+        </div>
+        <div class="input">
+          <label for="text">Altura</label><br>
+          <input type="text" name="altura" value="<?php echo $obraAtual->getAltura(); ?>" required>
+        </div>
+        <div class="input">
+          <label for="text">Largura</label><br>
+          <input type="text" name="largura" value="<?php echo $obraAtual->getLargura(); ?>" required>
+        </div>
+        <div class="input">
+          <label for="number">Valor</label><br>
+          <input type="number" step="0.0001" name="valorEstimado" min="0.0000" value="<?php echo $obraAtual->getValorEstimado(); ?>" required>
+        </div>
+        <div class="input">
+          <label for="file">Foto</label><br>
+          <input type="file" name="foto">
+        </div>
+        <div class="input">
+          <label for="number">Quantidade</label><br>
+          <input type="number" name="estoque" value="<?php echo $obraAtual->getEstoque(); ?>" required>
+        </div>
+        <div id="botoes">
+          <button type="push">Cancelar</button>
+          <button type="submit" name="enviarObra" value="Enviar">Confirmar</button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
 <?php
     } else {
-        echo "Nao eh possivel editar uma obra inexistente!";
+        echo "Não é possivel editar uma obra inexistente!";
     }
 ?>
