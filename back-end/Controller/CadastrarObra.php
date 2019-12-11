@@ -25,7 +25,7 @@
                 $obra = new ObraDAO();
                 $obra->inserir($con, $obraAtual);
                 $connection->closeConnection();
-                //header("Location: ../View/admin-page.php");
+                header("Location: ../View/admin-page.php");
             }
         }
     }
