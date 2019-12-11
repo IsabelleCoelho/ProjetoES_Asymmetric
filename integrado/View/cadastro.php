@@ -9,7 +9,7 @@
       <div id="logo">
           <img class="logo1" src="Assets/logo.png" alt="logo1">
       </div>
-      <form method="POST" action="../Controller/CadastrarCliente.php" enctype="multipart/form-data">
+      <form id="formulario" method="POST" action="../Controller/CadastrarCliente.php" enctype="multipart/form-data">
 <?php       if (isset($_SESSION['err'])) {
                 if ($_SESSION['err']  === 2)
                     echo '<p style="color: red;">CPF já cadastrado!</p>';
@@ -24,15 +24,15 @@
         </div>
         <div class="input">
           <label for="text">Nome</label><br>
-          <input type="text" name="nome" required>
+          <input type="text" name="nome" autocomplete="off" required>
         </div>
         <div class="input">
           <label for="password">Senha</label><br>
           <input type="password" name="senha" autocomplete="new-password" required>
-          </div>
+        </div>
         <div class="input">
           <label for="text">CPF</label><br>
-          <input type="text" name="cpf" autocomplete="off" required>
+          <input type="text" name="cpf" required>
         </div>
         <div class="input">
           <label for="file">Foto</label><br>
@@ -85,9 +85,7 @@
           <option value="TO">Tocantins</option>
       </select>
         <div id="botoes">
-          <a href="login.php">
-            <button type="push" style="padding: 8px 18px; margin-right: 20px;">Cancelar</button>
-          </a>
+          <a href="login.php"><button type="push" style="padding: 8px 18px; margin-right: 20px;">Cancelar</button></a>
           <button type="submit" name="enviarCliente" style="padding: 8px 18px; margin-right: 20px;">Confirmar</button>
         </div>
       </form>
