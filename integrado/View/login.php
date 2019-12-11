@@ -2,12 +2,12 @@
 <!DOCTYPE html>
     <head>
         <meta charset="UTF-8">
-        <link rel="stylesheet" type="text/css" href="CSS/styleFormularios.css" />
+        <link rel="stylesheet" type="text/css" href="../CSS/styleFormularios.css" />
     </head>
     <body>
         <div class="conteinerFormularioLogin">
             <div id="logo">
-                <img class="logo1" src="Assets/logo.png" />
+                <img class="logo1" src="../Assets/logo.png" />
             </div>
             <form id="formulario" method="POST" action="../Controller/login.php">
 <?php           if (isset($_SESSION['err'])) {
