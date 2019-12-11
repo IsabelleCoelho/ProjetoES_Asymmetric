@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Nunito', sans-serif;
+}
+
+header{
+    height: 56px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    position: fixed;
+    padding-left:24px;
+    padding-right:24px;
+    padding-bottom:12px;
+    padding-top:12px;
+    background-color:#1D1D21;
+}
+
+.logo1{
+    cursor: pointer;
+    width: 150px;
+    height: 45px;
+    background-color: transparent;
+}
+
+.botaoSair{
+    width: 40px;
+    height: 40px;
+}
+.botaoSair:hover{
+    background-color:#333;
+    border-radius:20px;
+}
+.sair{
+    cursor: pointer;
+    background-color: transparent;
+    height: 24px;
+    margin-top: 8px;
+    margin-left: 8px;
+}
+body{
+    background: rgb(29,29,33)!important;
+    background: linear-gradient(90deg, rgba(29,29,33,1) 0%, rgba(79,79,88,1) 50%, rgba(203,205,226,1) 100%)!important;;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: 0.25fr 2.25fr 2.25fr 0.25fr;
+    grid-template-rows: 10fr 80fr 10fr;
+    grid-template-areas:"l L R r"
+                        "marginRight picture description marginLeft"
+                        "bottomRight b b bottomLeft";
+}
+
+.imagem{
+    grid-area: picture;
+    margin-top: 110px;
+    margin-left: 50px;
+    margin-right: 5px;;
+    align-content: center;
+    text-align: center;
+    color: gray;
+}
+
+.descricao{
+    grid-area: description;
+    margin-top: 290px;
+    align-items: center;
+    text-align: center;
+    margin-right: 50px;
+    margin-left: 5px;
+}
+
+#titulo{
+    margin-bottom: 90px;
+}
+
+
+.menuAdminBotao {
+    width: 20px;
+    height: 20px;
+    z-index: 0;
+    position: absolute;
+    top: 125px;
+    right: 45px;
+}
+
+.menuAdminBotao img:hover {
+    cursor: pointer;
+    opacity: .8;
+}
+
+#addProduto{
+    text-decoration: none;
+    font-size:20px;
+    color:rgba(203,205,226,1);
+}
+
+button{
+    background: transparent;
+    color:rgb(29, 29, 31);
+    border-radius: 10px;
+    flex: 1;
+    font-weight: bold;
+    margin: 10px;
+    border-color: rgb(29, 29, 31);
+    box-shadow: 0px;
+    font-size: 20px;
+    padding: 10px;
+}
+
+button:hover{
+    background-color:rgba(55, 55, 58, 0.705);
+    color: rgb(228, 229, 238);
+}

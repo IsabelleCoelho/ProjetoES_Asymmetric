@@ -37,7 +37,6 @@
                     <label>Estoque: </label>
                     <input type="number", name="estoque" value="<?php echo $obraAtual->getEstoque(); required ?>" /><br/>
                     <input type="number" name="idObra" value="<?php echo $_POST['idObra']; ?>" hidden />
-                    <input type="text" name="atualizarObra" hidden />
                     <input type="submit" name="enviarObra" value="Enviar" />
                 </form>
             </body>
