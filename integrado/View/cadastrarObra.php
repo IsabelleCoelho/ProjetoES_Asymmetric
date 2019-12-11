@@ -1,28 +1,56 @@
-<html>
-    <head>
-        <title>Cadastrar obra</title>
-    </head>
-    <body>
-        <form method="POST" action="../Controller/CadastrarObra.php" enctype="multipart/form-data">
-            <label>Nome da obra: </label>
-            <input type="text" name="nomeObra" required /><br/>
-            <label>Valor estimado: </label>
-            <input type="number" name="valorEstimado" required /><br/>
-            <label>Material: </label>
-            <input type="text" name="material" required /><br/>
-            <label>Local: </label>
-            <input type="text" name="local" required /><br/>
-            <label>Nome do Autor: </label>
-            <input type="text" name="nomeAutor" required /> <br/>
-            <label>Foto: </label>
-            <input type="file" name="foto" required /><br/>
-            <label>Altura: </label>
-            <input type="number" step="0.01" placeholder="3.75" name="altura" required /><br/>
-            <label>Largura: </label>
-            <input type="number" step="0.01" placeholder="3.75" name="largura" required /><br/>
-            <label>Estoque: </label>
-            <input type="number" value="1" name="estoque" required /><br/>
-            <input type="submit" name="enviarObra" value="Enviar" />
-        </form>
-    </body>
+<!DOCTYPE html>
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="../CSS/styleFormularios.css" />
+  </head>
+  <body>
+    <div class="conteinerFormulario">
+      <div id="logo">
+          <img class="logo1" src="../Assets/logo.png" alt="logo1">
+      </div>
+      <form id="formulario" method="POST" action="../Controller/CadastrarObra.php" enctype="multipart/form-data">
+        <h1 class="titulo">Cadastro de Produto</h1>
+        <div class="input">
+          <label for="text">Nome</label><br>
+          <input type="text" name="nomeObra" required>
+        </div>
+        <div class="input">
+          <label for="text">Artista</label><br>
+          <input type="text" name="nomeAutor" required>
+        </div>
+        <div class="input">
+          <label for="text">Local</label><br>
+          <input type="text" name="local" required>
+        </div>
+        <div class="input">
+          <label for="text">Material</label><br>
+          <input type="text" name="material" required>
+        </div>
+        <div class="input">
+          <label for="text">Altura</label><br>
+          <input type="text" name="altura" placeholder="3.75" required>
+        </div>
+        <div class="input">
+          <label for="text">Largura</label><br>
+          <input type="text" name="largura" placeholder="3.75" required>
+        </div>
+        <div class="input">
+          <label for="number">Valor</label><br>
+          <input type="number" step="0.0001" name="valorEstimado" min="0.0000" required>
+        </div>
+        <div class="input">
+          <label for="file">Foto</label><br>
+          <input type="file" name="foto" required>
+        </div>
+        <div class="input">
+            <label for="number">Quantidade</label><br>
+            <input type="number" value="1" name="estoque" required> 
+        </div>
+        <div id="botoes">
+          <button type="push">Cancelar</button>
+          <button type="submit" name="enviarObra" value="Enviar">Confirmar</button>
+        </div>
+      </form>
+    </div>
+  </body>
 </html>
