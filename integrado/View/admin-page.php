@@ -11,41 +11,46 @@
         $connection->closeConnection();
 ?>
 
+        <!DOCTYPE html>
         <html>
-            <head>
-                <title>Admin page</title>
-            </head>
-            <body>
-                <div style="padding-left:20%; padding-right:20%;">
-                    <div style="width:100%; height:30px; background-color:grey; margin-bottom:10px;">
-                        <a href="../Controller/Logout.php" style="color:white; margin-left:66%;">Logout</a>
-                    </div>
-<?php               foreach ($obras as $umaObra) { ?>
-                        <div style="display:inline-block; border:2px solid black; width:150px; height:200px; background-color:grey; padding-left:10px;">
-                            <img src="<?php echo "../uploads/obras/".$umaObra->getFoto(); ?>" style="margin-left:20px; margin-top:5px; width:100px; height:100px;" /><br/>
-                            <h2 style="margin-top:2px; margin-bottom:0px;"><?php echo $umaObra->getNomeObra(); ?></h2><br/>
-                            <div style="display:inline-block;">
-                                <form method="POST" action="atualizarObra.php">
-                                    <input type="number" name="idObra" value="<?php echo $umaObra->getIdObra(); ?>" hidden />
-                                    <input type="submit" name="atualizarObra" style="background-image:url('../imgs/edit2.png'); width:25px; height:25px; border : none; color : transparent;" />
-                                </form>
-                            </div>
-                            <div style="display:inline-block; margin-left:15px;">
-                                <form method="POST" action="../Controller/excluirObra.php">
-                                    <input type="text" name="foto" value="<?php echo $umaObra->getFoto(); ?>" hidden />
-                                    <input type="number" name="idObra" value="<?php echo $umaObra->getIdObra(); ?>" hidden />
-                                    <input type="submit" name="excluirObra" style="background-image:url('../imgs/delete2.png'); width:25px; height:25px; border : none; color : transparent;" />
-                                </form>
-                            </div>
-                        </div>
-<?php               } ?>
-                    <a href="cadastrarObra.php">
-                        <div style="display:inline-block; border:2px solid black; width:150px; height:200px; background-color:white; padding-left:10px;">
-                            <br/><br/><br/><br/><h1 style="margin-top:2px; margin-bottom:3px; margin-left:55px;">+</h1><br/><br/><br/>
-                        </div>
-                    </a>
+        <head>
+            <meta charset="utf-8">
+            <link rel="stylesheet" href="CSS/styleTelaAdmin.css">
+        </head>
+        <body>
+            <header>
+                <div class=botaoSair>
+                    <img class="sair" src="Assets/sair.svg" alt="sair">
                 </div>
-            </body>
+                <a href="telaProdutosAdmin.html">
+                    <img class="logo1" src="Assets/logo1.svg" alt="logo1">
+                </a>
+                <a href="#" id="addProduto">Adicionar Produto</a>
+            </header>
+            <div class="container">
+<?php       foreach ($obras as $umaObra) { ?>
+                <div class="container">
+                    <div class="imagem">
+                        <h1 id="titulo"><?php echo $umaObra->getNomeObra(); ?></h1><br>
+                        <img style="width:347px; height:457px;" src="<?php echo "../uploads/obras/".$umaObra->getFoto(); ?>" alt="pensadorImg">
+                    </div>
+                    <div class="descricao">
+                        <h1>"<?php echo $umaObra->getNomeObra(); ?>"</h1><br>
+                        <h2>Artista: <?php echo $umaObra->getNomeAutor(); ?><br>
+                            Local: <?php echo $umaObra->getLocal(); ?><br>
+                            Material: <?php echo $umaObra->getMaterial(); ?><br>
+                            Valor Estimado: R$<?php echo $umaObra->getValorEstimado(); ?><br>
+                            Altura: <?php echo $umaObra->getAltura(); ?><br>
+                            Largura: <?php echo $umaObra->getLargura(); ?><br>
+                        </h2><br>
+                    </div>
+                </div>
+<?php       } ?>
+                    <button type="button" id="alterarObra">Alterar</button>
+                    <button type="button" id="excluirObra">Excluir</button>
+                </div>
+            </div>
+        </body>
         </html>
 <?php
     }

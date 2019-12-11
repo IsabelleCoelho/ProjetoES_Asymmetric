@@ -37,6 +37,10 @@ html, body{
 }
 
 #formulario{
+<<<<<<< HEAD
+    align-self: center;
+=======
+>>>>>>> 25cd70b9455482891d10f55348322fb7f31d502a
     color: #1D1D21;
     background: rgb(228, 229, 238);
     grid-area: f;

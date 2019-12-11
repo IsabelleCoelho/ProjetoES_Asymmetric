@@ -2,21 +2,21 @@
 <!DOCTYPE html>
   <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" href="../CSS/styleFormularios.css" />
+    <link rel="stylesheet" type="text/css" href="CSS/styleFormularios.css" />
   </head>
   <body>
     <div class="conteinerFormulario">
       <div id="logo">
-          <img class="logo1" src="../Assets/logo.png" alt="logo1">
+          <img class="logo1" src="Assets/logo.png" alt="logo1">
       </div>
       <form id="formulario" method="POST" action="../Controller/CadastrarCliente.php" enctype="multipart/form-data">
-        <?php       if (isset($_SESSION['err'])) {
-          if ($_SESSION['err']  === 2)
-              echo '<p style="color: red;">CPF já cadastrado!</p>';
-          if ($_SESSION['err']  === 1)
-              echo '<p style="color: red;">Email já cadastrado!</p>';
-          unset($_SESSION['err']);
-      } ?>
+<?php       if (isset($_SESSION['err'])) {
+                if ($_SESSION['err']  === 2)
+                    echo '<p style="color: red;">CPF já cadastrado!</p>';
+                if ($_SESSION['err']  === 1)
+                    echo '<p style="color: red;">Email já cadastrado!</p>';
+                unset($_SESSION['err']);
+            } ?>
         <h1 class="titulo">Cadastro</h1>
         <div class="input">
           <label for="email">E-mail</label><br>
@@ -24,15 +24,11 @@
         </div>
         <div class="input">
           <label for="text">Nome</label><br>
-          <input type="text" name="nomeCliente" autocomplete="off" required>
+          <input type="text" name="nome" autocomplete="off" required>
         </div>
         <div class="input">
           <label for="password">Senha</label><br>
-          <input type="password" name="senha" required>
-        </div>
-        <div class="input">
-          <label for="password">Confirmar Senha</label><br>
-          <input type="password" name="confirmacaoSenha" required>
+          <input type="password" name="senha" autocomplete="new-password" required>
         </div>
         <div class="input">
           <label for="text">CPF</label><br>
@@ -89,8 +85,8 @@
           <option value="TO">Tocantins</option>
       </select>
         <div id="botoes">
-          <a href="login.php"></a><button type="push">Cancelar</button></a>
-          <button type="submit" name="enviarCliente">Confirmar</button>
+          <a href="login.php"><button type="push" style="padding: 8px 18px; margin-right: 20px;">Cancelar</button></a>
+          <button type="submit" name="enviarCliente" style="padding: 8px 18px; margin-right: 20px;">Confirmar</button>
         </div>
       </form>
     </div>
