@@ -29,7 +29,7 @@ O cliente poderá comprar uma ou mais obras e terá um perfil, o qual poderá al
 |-- docs
 	|-- logos
 	|-- Protótipo
-	|-- Requisitos
+	|-- Documento de Requisitos
 	|-- Diagramas de Sequencia
 	|-- Diagrama de Classe
 	|-- Diagrama de Implantação
