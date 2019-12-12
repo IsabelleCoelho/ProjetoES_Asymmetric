@@ -37,7 +37,7 @@
                 case "rmvIndex":
                     foreach ($_SESSION['carrinho'] as $chaves => $valores) {
                         if ($valores['id'] === $_POST['idObra'])
-                            unset($_SESSION['carrinho'][$chaves]);
+                            array_splice($_SESSION['carrinho'], $chaves, 1);
                     }
                     if (empty($_SESSION['carrinho'])) unset($_SESSION['carrinho']);
                     header("Location: ../View/index.php");
@@ -45,7 +45,7 @@
                 case "rmvCarPage":
                     foreach ($_SESSION['carrinho'] as $chaves => $valores) {
                         if ($valores['id'] === $_POST['id'])
-                            unset($_SESSION['carrinho'][$chaves]);
+                            array_splice($_SESSION['carrinho'], $chaves, 1);
                     }
                     if (empty($_SESSION['carrinho'])) unset($_SESSION['carrinho']);
                     header("Location: ../View/carrinho.php");

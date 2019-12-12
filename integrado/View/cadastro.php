@@ -85,8 +85,8 @@
           <option value="TO">Tocantins</option>
       </select>
         <div id="botoes">
-          <a href="login.php"><button type="push" style="padding: 8px 18px; margin-right: 20px;">Cancelar</button></a>
-          <button type="submit" name="enviarCliente" style="padding: 8px 18px; margin-right: 20px;">Confirmar</button>
+        <a href="login.php"><div class="botaoCancelar">Cancelar</div></a>
+        <button type="submit" name="enviarCliente" style="padding: 8px 18px; margin-right: 20px;">Confirmar</button>
         </div>
       </form>
     </div>

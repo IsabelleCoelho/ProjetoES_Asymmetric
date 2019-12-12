@@ -108,3 +108,24 @@ button:hover{
     background-color:rgb(55, 55, 58);
     color: rgb(228, 229, 238);
 }
+
+.botaoCancelar{
+    background-color: rgb(228, 229, 238);
+    color:rgb(55, 55, 58);
+    border-radius: 10px;
+    flex: 1;
+    font-weight: bold;
+    margin: 10px;
+    border: 2px solid rgb(55, 55, 58);
+    box-shadow: 0px;
+    padding: 8px 18px;
+    margin-right: 20px;
+    font-size: 14px;
+}
+
+.botaoCancelar:hover{
+    background-color:rgb(55, 55, 58);
+    color: rgb(228, 229, 238);
+}
+
+

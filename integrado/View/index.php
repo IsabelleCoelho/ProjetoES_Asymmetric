@@ -58,7 +58,7 @@
                                         <form method="POST" action="../Controller/Carrinho.php">
                                             <input type="text" name="acaoCarrinho" value="add" hidden />
                                             <input type="number" name="idObra" value="<?php echo $umaObra->getIdObra(); ?>" hidden />
-                                            <button type="submit" name="enviar">Adicionar ao carrinho</button>       
+                                            <button type="submit" name="enviar">Adicionar ao Carrinho</button>     
                                         </form>
                                     </div>
 <?php                               } else { ?>
@@ -66,7 +66,7 @@
                                             <form method="POST" action="../Controller/Carrinho.php">
                                                 <input type="text" name="acaoCarrinho" value="rmvIndex" hidden />
                                                 <input type="number" name="idObra" value="<?php echo $umaObra->getIdObra(); ?>" hidden />
-                                                <button type="submit" name="enviar">Remover do carrinho</button>    
+                                                <button type="submit" name="enviar">Remover ao Carrinho</button>   
                                             </form>
                                         </div>
 <?php                               }
@@ -75,7 +75,7 @@
                                         <form method="POST" action="../Controller/Carrinho.php">
                                             <input type="text" name="acaoCarrinho" value="add" hidden />
                                             <input type="number" name="idObra" value="<?php echo $umaObra->getIdObra(); ?>" hidden />
-                                            <button type="submit" name="enviar">Adicionar ao carrinho</button>
+                                            <button type="submit" name="enviar">Adicionar ao Carrinho</button>
                                         </form>
                                     </div>
 <?php                           } ?>

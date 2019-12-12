@@ -30,7 +30,7 @@
                 </div>
                 <div id="buttonLogin">
                     <button type="submit" name="login">Login</button>    
-                    <a href="cadastro.php"><button type="push">Cadastrar</button></a>
+                    <a href="cadastro.php"><div class="botaoCancelar">Registrar</div></a>
                 </div>
             </form>
         </div>

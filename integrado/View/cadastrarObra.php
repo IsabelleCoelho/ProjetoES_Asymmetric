@@ -51,8 +51,8 @@
                   <input type="number" value="1" name="estoque" required> 
               </div>
               <div id="botoes">
-                <a href="admin-page.php"><button type="push">Cancelar</button></a>
-                <button type="submit" name="enviarObra" value="Enviar">Confirmar</button>
+              <a href="admin-page.php"><div class="botaoCancelar">Cancelar</div></a>
+              <button type="submit" name="enviarObra" value="Enviar">Confirmar</button>
               </div>
             </form>
           </div>

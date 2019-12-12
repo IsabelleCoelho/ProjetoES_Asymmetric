@@ -62,7 +62,7 @@
                 </div>
                 <div id="botoes">
                 <input type="number" name="idObra" value="<?php echo $_POST['idObra']; ?>" style="display:none;" />
-                <a href="admin-page.php">Cancelar</a>
+                <a href="admin-page.php"><div class="botaoCancelar">Cancelar</div></a>
                 <button type="submit" name="enviarObra">Confirmar</button>
                 </div>
             </form>
