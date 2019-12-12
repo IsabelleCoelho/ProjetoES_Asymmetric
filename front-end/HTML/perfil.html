@@ -1,3 +1,17 @@
+<?php
+    session_start();
+    if(!isset($_POST['atualizarCliente'])) {
+        include("../Model/Cliente.php");
+        include("../Persistence/ClienteDAO.php");
+        include("../Persistence/Connection.php");
+        $clienteAtual = new Cliente();
+        $clienteAtual->setIdCliente($_SESSION['usrId']);
+        $connection = new Connection();
+        $con = $connection->openConnection();
+        $cliente = new ClienteDAO();
+        $cliente->recuperar($con, $clienteAtual);
+        $connection->closeConnection();
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -24,7 +38,7 @@
     </header>
     <h1 class="titulo">Perfil</h1>
     <div class="container">
-        <form id="formulario" method="POST" action="*">
+        <form id="formulario" method="POST" action="../Controller/AtualizarCliente.php" enctype="multipart/form-data">
             <div class="input">
                 <label for="text">Nome</label><br>
                 <input type="nome" name="nome" value ="Nome" disabled>
@@ -41,13 +55,46 @@
                 <label for="text">Senha</label><br>
                 <input type="password" name="senha" value="dadwadwada" disabled>
             </div>
+            <div class="input">
+                <label for="text">Senha</label><br>
+                <input type="password" name="senha" value="dadwadwada" disabled>
+            </div>
+            <div class="input">
+                <label>Estado: </label>
+                <input type="text" name="estado" maxlength="2" placeholder="RJ" value="<?php echo $clienteAtual->getEstado(); ?>" required /><br/>
+            </div>
+            <div class="input">
+                <label>Cidade: </label>
+                <input type="text" name="cidade" value="<?php echo $clienteAtual->getCidade(); ?>" required /><br/>
+            </div>
+            <div class="input">
+                <label>Bairro: </label>
+                <input type="text" name="bairro" value="<?php echo $clienteAtual->getBairro(); ?>" required /><br/>
+            </div>
+            <div class="input">
+                <label>Rua: </label>
+                <input type="text" name="rua" value="<?php echo $clienteAtual->getRua(); ?>" required /><br/>
+            </div>
+            <div class="input">
+                <label>Numero da residencia: </label>
+                <input type="number" name="numResidencia" value="<?php echo $clienteAtual->getNumResidencia(); ?>" required /><br/>
+            </div>
+            <div class="input">
+                <label>Foto: </label>
+                <input type="file" name="foto" /><br/><br/>
+                <input type="text" name="bkpFoto" value="<?php echo $clienteAtual->getFoto(); ?>" hidden />
+            </div>
         </form>
         <div id="foto">
             <img class="imgdefault" src="../Assets/userDefault.svg">
         </div>
         <div id="buttonLogin">
-            <button id="botaoAlterar" type="push">Alterar</button>
-            <button id="botaoAlterar" type="push">Excluir</button>
+            <button id="botaoAlterar" type="submit" name="attCliente">Alterar</button>
+            <button id="botaoAlterar" type="submit" name="excluirCliente">Excluir</button>
         </div>
     </div>
 </body>
+</html>
+<?php
+    }
+?>

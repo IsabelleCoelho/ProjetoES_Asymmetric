@@ -22,24 +22,24 @@
         <html>
         <head>
             <meta charset="utf-8">
-            <link rel="stylesheet" href="CSS/styleHistorico.css">
+            <link rel="stylesheet" href="../CSS/styleHistorico.css">
         </head>
         <body>
             <header>
                 <div class=botaoPerfil>
-                    <a href="perfil.php"><img class="perfil" src="Assets/userDefault.svg" alt="perfil"></a>
+                    <a href="perfil.php"><img class="perfil" src="../Assets/userDefault.svg" alt="perfil"></a>
                 </div>
                 <div class=botaoSair>
-                    <a href="../Controller/Logout.php"><img class="sair" src="Assets/sair.svg" alt="sair" aligm="center"></a>
+                    <a href="../Controller/Logout.php"><img class="sair" src="../Assets/sair.svg" alt="sair" aligm="center"></a>
                 </div>
                 <a href="index.html">
-                    <a href="index.php"><img class="logo1" src="Assets/logo1.svg" alt="logo1"></a>
+                    <a href="index.php"><img class="logo1" src="../Assets/logo1.svg" alt="logo1"></a>
                 </a>
                 <div class=botaoHistorico>
-                    <a href="historicoCompras.php"><img class="historico" src="Assets/historico.svg" alt="historico"></a>
+                    <a href="historicoCompras.php"><img class="historico" src="../Assets/historico.svg" alt="historico"></a>
                 </div>
                 <div class=botaoCarrinho>
-                    <a href="carrinho.php"><img class="carrinho" src="Assets/carrinho.svg" alt="carrinho"></a>
+                    <a href="carrinho.php"><img class="carrinho" src="../Assets/carrinho.svg" alt="carrinho"></a>
                 </div>
             </header>
             <div style="padding-top:100px; padding-left:20%;">
