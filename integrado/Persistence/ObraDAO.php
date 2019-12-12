@@ -40,5 +40,12 @@
             $query = "DELETE FROM obra WHERE idObra=".$obra->getIdObra().";";
             mysqli_query($con, $query);
         }
+
+        public function restaurarEstoque($con, $obra) {
+            $query = "SELECT estoque FROM obra WHERE idObra=".$obra->getIdObra().";";
+            $novoEstoque = ((mysqli_fetch_assoc(mysqli_query($con, $query)))['estoque'] + $obra->getEstoque());
+            $query = "UPDATE obra SET estoque=".$novoEstoque." WHERE idObra=".$obra->getIdObra().";";
+            mysqli_query($con, $query);
+        }
     }
 ?>

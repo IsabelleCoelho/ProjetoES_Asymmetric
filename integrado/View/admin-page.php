@@ -20,14 +20,13 @@
         <body>
             <header>
                 <div class=botaoSair>
-                    <img class="sair" src="Assets/sair.svg" alt="sair">
+                    <a href="../Controller/Logout.php"><img class="sair" src="Assets/sair.svg" alt="sair"></a>
                 </div>
                 <a href="telaProdutosAdmin.html">
                     <img class="logo1" src="Assets/logo1.svg" alt="logo1">
                 </a>
-                <a href="#" id="addProduto">Adicionar Produto</a>
+                <a href="cadastrarObra.php" id="addProduto">Adicionar Produto</a>
             </header>
-            <div class="container">
 <?php       foreach ($obras as $umaObra) { ?>
                 <div class="container">
                     <div class="imagem">
@@ -43,13 +42,22 @@
                             Altura: <?php echo $umaObra->getAltura(); ?><br>
                             Largura: <?php echo $umaObra->getLargura(); ?><br>
                         </h2><br>
+                        <div style="display:inline-block;">
+                            <form method="POST" action="atualizarObra.php">
+                                <input type="number" name="idObra" value="<?php echo $umaObra->getIdObra(); ?>" hidden />
+                                <button id="alterarObra" type="submit" name="atualizarObra">Alterar</button>
+                            </form>
+                        </div>
+                        <div style="display:inline-block; margin-left:15px;">
+                            <form method="POST" action="../Controller/excluirObra.php">
+                                <input type="text" name="foto" value="<?php echo $umaObra->getFoto(); ?>" hidden />
+                                <input type="number" name="idObra" value="<?php echo $umaObra->getIdObra(); ?>" hidden />
+                                <button id="excluirObra" type="submit" name="excluirObra">Excluir</button>
+                            </form>
+                        </div>
                     </div>
                 </div>
 <?php       } ?>
-                    <button type="button" id="alterarObra">Alterar</button>
-                    <button type="button" id="excluirObra">Excluir</button>
-                </div>
-            </div>
         </body>
         </html>
 <?php

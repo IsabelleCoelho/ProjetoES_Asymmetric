@@ -21,19 +21,19 @@
         <body>
             <header>
                 <div class=botaoPerfil>
-                    <img class="perfil" src="Assets/userDefault.svg" alt="perfil">
+                    <a href="perfil.php"><img class="perfil" src="Assets/userDefault.svg" alt="perfil"></a>
                 </div>
                 <div class=botaoSair>
-                    <img class="sair" src="Assets/sair.svg" alt="sair" aligm="center">
+                    <a href="../Controller/Logout.php"><img class="sair" src="Assets/sair.svg" alt="sair" aligm="center"></a>
                 </div>
                 <a href="index.html">
-                    <img class="logo1" src="Assets/logo1.svg" alt="logo1">
+                    <a href="index.php"><img class="logo1" src="Assets/logo1.svg" alt="logo1"></a>
                 </a>
                 <div class=botaoHistorico>
-                    <img class="historico" src="Assets/historico.svg" alt="historico">
+                    <a href="historicoCompras.php"><img class="historico" src="Assets/historico.svg" alt="historico"></a>
                 </div>
                 <div class=botaoCarrinho>
-                    <img class="carrinho" src="Assets/carrinho.svg" alt="carrinho">
+                    <a href="carrinho.php"><img class="carrinho" src="Assets/carrinho.svg" alt="carrinho"></a>
                 </div>
             </header>
             <h1 class="titulo">Perfil</h1>
